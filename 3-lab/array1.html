@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+        //with using predefined function
+        var size=prompt("Enter the size:");
+        var arr=[];
+        for(var i=0;i<size;i++)
+        {
+            arr[i]=prompt("Enter the element:"+(i+1));
+        }
+        arr.sort();
+        for(var i=0;i<size;i++)
+        {
+            document.write(arr[i]+ "<br>");
+        }
+
+
+
+        //without using predefined function
+        for(let i = 0; i < size-1; i++) {
+        // Finding the smallest number in the subarray
+        for(let j = i+1; j < size; j++){
+            var min = i;
+            if(arr[j] < arr[min]) {
+                min=j; 
+            }
+         if (min != i) {
+             // Swapping the elements
+             let tmp = arr[min]; 
+             arr[min] = arr[i];
+             arr[i] = tmp;      
+        }
+    }
+    }
+        for(var i=0;i<size;i++){
+            document.write(arr[i] + "<br>");
+        }
+    </script>
+
+
+</body>
+</html>

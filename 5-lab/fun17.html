@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = [12,18,25,24,2,5,18,20,20,21];
+        let sum = 0;
+        for(let i=0;i<a.length;i++){
+            sum += a[i];
+        }
+        let avg = sum / a.length;
+        let count = 0;
+        for(let j=0;j<a.length;j++){
+            if(a[j] > avg){
+                count++;
+            }
+        }
+
+        let percentage = (count/a.length)*100;
+        document.write("more than average : ",percentage);
+        document.write("<br>");
+
+        let arr = new Array(26);
+        for(let i=0;i<=25;i++){
+            arr[i] = 0;
+        }
+
+        for(let i=0;i< a.length;i++){
+            arr[a[i]] += 1;
+        }
+
+        document.write("frequency : ",arr);
+    </script>
+</body>
+</html>
